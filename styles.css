@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "Sinkin Sans";
+  src: url("./fonts/SinkinSans-400Regular.woff2") format("woff2"),
+    url("./fonts/SinkinSans-400Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sinkin Sans";
+  src: url("./fonts/SinkinSans-700Bold.woff2") format("woff2"),
+    url("./fonts/SinkinSans-700Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sinkin Sans", sans-serif;
+  color: #b3b3b3;
+}
+
+body {
+  background: linear-gradient(237.1deg, #27234d, #007da9);
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(-90deg, #181838, #103464);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 110px;
+}
+
+/* NAVIGATION */
+.page-navbar .navbar-nav {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.search-btn img {
+  width: 100%;
+  filter: invert(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.search-btn:hover img {
+  opacity: 1;
+}
+
+/* ===== MAIN SECTIONS ===== */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px auto;
+  max-width: 1100px;
+  gap: 50px;
+}
+
+.image-container img {
+  max-width: 520px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+.title-content-box {
+  width: 60%;
+}
+
+.title-content-box h2 {
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.title-content-box hr {
+  border: 1.5px solid #b3b3b3;
+  width: 140px;
+  margin: 30px 0;
+}
+
+.title-content-box p {
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* ===== PARTNERS ===== */
+.partners-logos {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.partners-logos img {
+  width: 90px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.partners-logos img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* SECTION DIVIDER */
+.section-divider {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  width: 80%;
+  margin: 60px auto;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  flex-wrap: wrap;
+}
+
+.contact-section img {
+  width: 18%;
+  filter: brightness(0) invert(1);
+  margin: 25px;
+}
+
+.contact-section .hr {
+  width: 2px;
+  height: 200px;
+  background-color: #b3b3b3;
+  margin: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  gap: 20px;
+}
+
+.info-text {
+  white-space: pre-wrap;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.buttons-area {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact-section button {
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid #b3b3b3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-section button img {
+  width: 60%;
+  filter: brightness(0) invert(1);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-content-box {
+    width: 90%;
+  }
+
+  .image-container img {
+    max-width: 340px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-section .hr {
+    width: 200px;
+    height: 2px;
+  }
+
+  .contact-section img {
+    width: 45%;
+  }
+}
